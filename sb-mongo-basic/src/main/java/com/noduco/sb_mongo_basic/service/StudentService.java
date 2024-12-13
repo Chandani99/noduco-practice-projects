@@ -3,6 +3,9 @@ package com.noduco.sb_mongo_basic.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.noduco.sb_mongo_basic.model.Student;
@@ -15,7 +18,7 @@ public class StudentService {
 	private StudentRepo srepo;
 	 
 	
-	
+	@CachePut(value = "students", key = "#student.id")
 	public Student addStudent(Student student) {
 		srepo.save(student);
 		return student;
@@ -31,6 +34,7 @@ public class StudentService {
 		return "Student data has updated: " + stu;
 	}
 	
+	@Cacheable(value = "students", key = "#id")
 	public Student getStudentById(Integer id) {
 		return srepo.findById(id).get();
 	}
@@ -48,7 +52,7 @@ public class StudentService {
 	}
 	
 	
-	
+	 @CacheEvict(value = "students", key = "#id")
 	
 	public String deleteStudent(Integer id) {
 		Student student = srepo.findById(id).get();
