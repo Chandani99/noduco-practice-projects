@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="log4j-api-2.3.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/apache-log4j-2.3.2-bin/log4j-api-2.3.2.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/apache-log4j-2.3.2-bin/log4j-core-2.3.2.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.." />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../LambdaExpression/src" />
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,6 @@
+/home/developer/Documents/Java8Projects/sb-mongo-basic/src/main/java/com/noduco/sb_mongo_basic/SbMongoBasicApplication.java
+/home/developer/Documents/Java8Projects/sb-mongo-basic/src/main/java/com/noduco/sb_mongo_basic/config/MongoConfig.java
+/home/developer/Documents/Java8Projects/sb-mongo-basic/src/main/java/com/noduco/sb_mongo_basic/controller/StudentController.java
+/home/developer/Documents/Java8Projects/sb-mongo-basic/src/main/java/com/noduco/sb_mongo_basic/model/Student.java
+/home/developer/Documents/Java8Projects/sb-mongo-basic/src/main/java/com/noduco/sb_mongo_basic/reposatory/StudentRepo.java
+/home/developer/Documents/Java8Projects/sb-mongo-basic/src/main/java/com/noduco/sb_mongo_basic/service/StudentService.java

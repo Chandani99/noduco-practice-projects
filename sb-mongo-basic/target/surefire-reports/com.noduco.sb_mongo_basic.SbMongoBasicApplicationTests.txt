@@ -1,0 +1,42 @@
+-------------------------------------------------------------------------------
+Test set: com.noduco.sb_mongo_basic.SbMongoBasicApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.049 s <<< FAILURE! -- in com.noduco.sb_mongo_basic.SbMongoBasicApplicationTests
+com.noduco.sb_mongo_basic.SbMongoBasicApplicationTests.contextLoads -- Time elapsed: 0.022 s <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class org.mockito.Mockito
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:105)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:85)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:73)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.beforeTestMethod(ResetMocksTestExecutionListener.java:60)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:320)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.beforeEach(SpringExtension.java:240)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	Suppressed: java.lang.NoClassDefFoundError: Could not initialize class org.mockito.Mockito
+		at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:105)
+		at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:85)
+		at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:73)
+		at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.afterTestMethod(ResetMocksTestExecutionListener.java:67)
+		at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:487)
+		at org.springframework.test.context.junit.jupiter.SpringExtension.afterEach(SpringExtension.java:278)
+		... 2 more
+	Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
+		at org.mockito.Mockito.<clinit>(Mockito.java:1683)
+		at org.powermock.api.mockito.mockmaker.MockMakerLoader.doLoad(MockMakerLoader.java:45)
+		at org.powermock.api.mockito.mockmaker.MockMakerLoader.load(MockMakerLoader.java:36)
+		at org.powermock.api.mockito.mockmaker.PowerMockMaker.<init>(PowerMockMaker.java:36)
+		at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+		at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+		at org.mockito.internal.configuration.plugins.PluginInitializer.loadImpl(PluginInitializer.java:51)
+		at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:65)
+		at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:49)
+		at org.mockito.internal.configuration.plugins.PluginRegistry.<init>(PluginRegistry.java:29)
+		at org.mockito.internal.configuration.plugins.Plugins.<clinit>(Plugins.java:26)
+		at org.mockito.internal.configuration.GlobalConfiguration.tryGetPluginAnnotationEngine(GlobalConfiguration.java:50)
+		at org.mockito.MockitoAnnotations.openMocks(MockitoAnnotations.java:80)
+		at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:99)
+		at com.noduco.sb_mongo_basic.serviceTest.StudentServiceTest.setUp(StudentServiceTest.java:46)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+		... 2 more
+Caused by: [CIRCULAR REFERENCE: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]]
+
